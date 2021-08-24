@@ -1,0 +1,33 @@
+.search {
+	.search__input {
+		display: flex;
+		align-items: center;
+		height: 30px;
+		border-radius: 999px;
+
+		margin: 0 auto;
+		max-width: 560px;
+
+		> input {
+			flex: 1;
+			font-size: medium;
+			outline: none;
+			border: none;
+			background-color: transparent;
+		}
+
+		> input:focus {
+			outline-width: 0;
+		}
+	}
+
+	.search__inputIcon {
+		color: gray;
+	}
+
+	.colorLensIcon {
+		:hover {
+			cursor: pointer;
+		}
+	}
+}

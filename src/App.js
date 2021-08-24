@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import './App.scss';
+import Mainpage from './components/Mainpage';
+import './components/sass/mixins.scss';
+import { keepTheme } from './components/utilities/themes';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	useEffect(() => {
+		keepTheme();
+	});
+	return (
+		<div className='App'>
+			<Mainpage />
+		</div>
+	);
 }
 
 export default App;
